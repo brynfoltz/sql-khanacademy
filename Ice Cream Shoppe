@@ -1,0 +1,30 @@
+CREATE TABLE products (id INTEGER PRIMARY KEY, 
+name TEXT, 
+quantity_lbs INTEGER, 
+price REAL,
+rating REAL);
+
+INSERT INTO products VALUES (1, "pistachio", 5, 2.00, 6);
+INSERT INTO products VALUES (2, "chocolate", 10, 2.00, 7);
+INSERT INTO products VALUES (3, "vanilla bean", 10, 2.00, 7); 
+INSERT INTO products VALUES (4, "strawberry swirl", 8, 2.50, 8);
+INSERT INTO products VALUES (5, "mint chocolate chip", 5, 2.00, 5);
+INSERT INTO products VALUES (6, "cotton candy", 5, 2.00, 9); 
+INSERT INTO products VALUES (7, "espresso", 6, 2.00, 9);
+INSERT INTO products VALUES (8, "butter pecan", 6, 2.00, 8);
+INSERT INTO products VALUES (9, "birthday cake", 8, 2.00, 7.5);
+INSERT INTO products VALUES (10, "cookies and cream", 6, 2.00, 9);
+INSERT INTO products VALUES (11, "waffle cones", 10, 2.00, 8);
+INSERT INTO products VALUES (12, "sugar cones", 10, 1.50, 6);
+INSERT INTO products VALUES (13, "bowls", 20, 1.00, 9);
+INSERT INTO products VALUES (14, "caramel drizzle", 5, .25, 7);
+INSERT INTO products VALUES (15, "chocolate syrup", 5, .25, 8);
+INSERT INTO products VALUES (16, "sprinkles", 5, .25, 5);
+
+SELECT * From products ORDER BY price desc;
+
+SELECT AVG(PRICE) FROM products;
+
+SELECT MAX(RATING),(name) AS highest_rating_ice_cream FROM products;
+
+SELECT MIN (RATING), (NAME) AS lowest_rating_ice_cream From products;
