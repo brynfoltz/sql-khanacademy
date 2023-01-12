@@ -1,0 +1,30 @@
+CREATE TABLE fitness_pal (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+name TEXT, 
+workout_type TEXT, 
+minutes INTEGER, 
+calories_burned INTEGER); 
+
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "weightlifting", 90, 660); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Emma", "yoga", 45, 400); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bria", "pilates", 60, 600); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "weightlifting", 78, 559); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "cardio", 30, 200); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "weightlifting", 90, 700); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Emma", "weightlifting", 55, 330); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Emma", "cardio", 20, 90); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "yoga", 50, 440); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bria", "weightlifting", 45, 500); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bria", "cardio", 35, 460); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bryn", "weightlifting", 80, 775); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Emma", "pilates", 45, 500); 
+INSERT INTO fitness_pal (name, workout_type, minutes, calories_burned) VALUES ("Bria", "weightlifting", 100, 800); 
+
+SELECT name, workout_type, minutes, calories_burned FROM fitness_pal; 
+
+UPDATE fitness_pal SET workout_type = "treadmill" WHERE workout_type = "cardio";
+
+SELECT name, workout_type, minutes, calories_burned FROM fitness_pal;
+
+DELETE FROM fitness_pal WHERE name = "Bria"; 
+
+SELECT name, workout_type, minutes, calories_burned FROM fitness_pal;
