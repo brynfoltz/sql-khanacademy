@@ -1,0 +1,56 @@
+CREATE TABLE comedians
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT, 
+age INTEGER, 
+country TEXT); 
+
+INSERT INTO comedians (fullname, age, country) VALUES ("Jerry Seinfeld", 66, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Larry David", 72, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Bill Cosby", 83, "US");
+INSERT INTO comedians (fullname, age, country) VALUES ("Jay Leno",70, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Trey Parker",50 , "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Matt Stone",48 , "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Kevin Hart ",41 , "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Seth MacFarlane ",47 , "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Drew Carey ",62 , "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Jim Carey",59, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Joan Rivers",86, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Rowan Atkinson", 66, "UK"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Dan Aykroyd", 68, "CA"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Sacha Baron Cohen", 48, "UK"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Bob Saget", 63, "US"); 
+INSERT INTO comedians (fullname, age, country) VALUES ("Jeff Foxworthy",62, "US"); 
+
+
+CREATE TABLE wealth (id INTEGER PRIMARY KEY, 
+comedian_id INTEGER, 
+net_worth_millions REAL);
+
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (1, 920); 
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (2, 800);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (3, 400);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (4, 400);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (5, 350);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (6, 300);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (7, 200);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (8, 194);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (9, 165);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (10, 150);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (11, 150);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (12, 150);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (13, 135);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (14, 130);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (15, 100);
+INSERT INTO wealth (comedian_id, net_worth_millions) VALUES (16, 100);
+
+SELECT comedians.fullname, comedians.age, comedians.country, wealth.net_worth_millions 
+FROM comedians
+JOIN wealth
+ON comedians.id = wealth.comedian_id;
+
+SELECT comedians.country, COUNT (*)
+FROM comedians
+GROUP BY country; 
+
+
+
